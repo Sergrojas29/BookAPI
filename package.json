@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Sergrojas29/BookAPI#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^7.0.2"
+    "mongoose": "^7.0.2",
+    "mongodb": "^5.1.0"
   }
 }
