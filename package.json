@@ -1,0 +1,23 @@
+{
+  "name": "bookapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sergrojas29/BookAPI.git"
+  },
+  "author": "Sergio Rojas-Aguilar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sergrojas29/BookAPI/issues"
+  },
+  "homepage": "https://github.com/Sergrojas29/BookAPI#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^7.0.2"
+  }
+}
