@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "server.js"
+    "start": "server.js",
+    "seed": "node config/seeds.js"
   },
   "repository": {
     "type": "git",
