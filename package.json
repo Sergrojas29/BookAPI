@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "seed": "node config/seeds.js"
+    "seed": "node config/seeds.js",
+    "watch": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -18,8 +19,12 @@
   },
   "homepage": "https://github.com/Sergrojas29/BookAPI#readme",
   "dependencies": {
+    "dotenv": "^16.3.1",
     "express": "^4.17.1",
     "mongoose": "^7.0.2",
     "mongodb": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
   }
 }
