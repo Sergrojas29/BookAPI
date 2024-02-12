@@ -21,7 +21,7 @@ router.post('/', async (req, res) => {
         res.status(200).json(data)
         
     } catch (error) {
-        res.status(200).json(error)
+        res.status(404).json(error)
     }
 })
 
@@ -34,7 +34,7 @@ router.get('/title', async (req, res) => {
         res.status(200).json(dataTitle)
         
     } catch (error) {
-        res.status(404).json(`No book under that id ${error}`)
+        res.status(404).json(`No book under that id ${title}`)
     }
 })
 
@@ -46,12 +46,11 @@ router.put('/', async (req, res) => {
         res.status(200).json(UpdateData)
         
     } catch (error) {
-        res.status(200).json(error)
+        res.status(404).json(error)
     }
 })
 
 //delete book by id
-
 router.delete('/', async (req, res) => {
     try {
         const {_id} = req.body
@@ -59,7 +58,7 @@ router.delete('/', async (req, res) => {
         res.status(200).json(UpdateData)
         
     } catch (error) {
-        res.status(200).json(error)
+        res.status(404).json(error)
     }
 })
 
