@@ -34,7 +34,7 @@ router.get('/title', async (req, res) => {
         res.status(200).json(dataTitle)
         
     } catch (error) {
-        res.status(200).json(error)
+        res.status(404).json(`No book under that id ${error}`)
     }
 })
 
