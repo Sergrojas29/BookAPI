@@ -1,34 +1,22 @@
 const router = require('express').Router()
-
-const jwt = require('jsonwebtoken')
-
-
-const secret = 'shhhmysecertshhhhhhh'
-
-const expiration = '2h'
-
-const userData = [
-    {
-        user: 'name',
-        password: 123
-    }
-]
+const auth = require('../utils/auth')
 
 
 
-
-
-
-router.get('/', async (req, res) => {
+router.get('/password/:pass', async (req, res) => {
     try {
-        
-        const token = jwt.sign({data: userData}, secret, {expiresIn: expiration})
+        if(req.params.pass = '123'){
+            res.status(200).json(auth.signToken('usertest', 156532))
+            // res.status(201).json('here')
+        }else{
 
-        res.status(200).json(token)
+            res.status(202).json(req.params)
+        }
+        res.status(202).json('incorrect password')
+
     } catch (error) {
-        // res.status(404).json(error)
-        res.status(404).json("here")
-        
+        res.status(404).json(error)
+
     }
 })
 
